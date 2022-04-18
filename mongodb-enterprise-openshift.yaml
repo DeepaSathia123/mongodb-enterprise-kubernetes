@@ -6,7 +6,7 @@ metadata:
   name: mongodb-enterprise-operator
   namespace: mongodb
 ---
-# Source: enterprise-operator/templates/operator-roles.yaml
+# Source: enterprise-operator/templates/operator-roles.yaml .
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
