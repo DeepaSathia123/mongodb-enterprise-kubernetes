@@ -87,6 +87,11 @@ rules:
   - mongodbusers/status
   - opsmanagers/status
   - mongodbmulti/status
+
+# This ClusterRoleBinding is necessary in order to use validating
+# webhooks—these will prevent you from applying a variety of invalid resource
+# definitions. The validating webhooks are optional so this can be removed if
+# necessary.
 ---
 # Source: enterprise-operator/templates/operator-roles.yaml
 kind: RoleBinding
@@ -235,7 +240,7 @@ spec:
         - name: INIT_APPDB_IMAGE_REPOSITORY
           value: quay.io/mongodb/mongodb-enterprise-init-appdb
         - name: INIT_APPDB_VERSION
-          value: 1.0.9
+          value: 1.0.10
         - name: OPS_MANAGER_IMAGE_PULL_POLICY
           value: Always
         - name: AGENT_IMAGE
