@@ -87,11 +87,6 @@ rules:
   - mongodbusers/status
   - opsmanagers/status
   - mongodbmulti/status
-
-# This ClusterRoleBinding is necessary in order to use validating
-# webhooks—these will prevent you from applying a variety of invalid resource
-# definitions. The validating webhooks are optional so this can be removed if
-# necessary.
 ---
 # Source: enterprise-operator/templates/operator-roles.yaml
 kind: RoleBinding
